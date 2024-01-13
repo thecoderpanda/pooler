@@ -22,7 +22,6 @@ class CoreAPI(BaseModel):
 class Wallet_App(BaseModel):
     host: str
     port: int
-    auth: Auth
     public_rate_limit: str
 
 
