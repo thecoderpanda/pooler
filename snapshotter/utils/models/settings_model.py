@@ -19,6 +19,12 @@ class CoreAPI(BaseModel):
     auth: Auth
     public_rate_limit: str
 
+class Wallet_App(BaseModel):
+    host: str
+    port: int
+    auth: Auth
+    public_rate_limit: str
+
 
 class RPCNodeConfig(BaseModel):
     url: str
@@ -144,6 +150,7 @@ class Web3Storage(BaseModel):
 class Settings(BaseModel):
     namespace: str
     core_api: CoreAPI
+    wallet_app: Wallet_App
     instance_id: str
     rpc: RPCConfigFull
     rlimit: RLimit

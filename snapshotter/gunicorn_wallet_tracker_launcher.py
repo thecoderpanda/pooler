@@ -2,7 +2,7 @@ import logging
 import os
 import sys
 
-from snapshotter.core_api import app
+from snapshotter.wallet_tracker import app
 from snapshotter.settings.config import settings
 from snapshotter.utils.default_logger import FORMAT
 from snapshotter.utils.default_logger import logger
@@ -38,7 +38,7 @@ if __name__ == '__main__':
     logger.add(sys.stderr, format=FORMAT, level=logging.ERROR, serialize=JSON_LOGS)
 
     options = {
-        'bind': f'{settings.core_api.host}:{settings.core_api.port}',
+        'bind': f'{settings.wallet_app.host}:{settings.wallet_app.port}',
         'workers': WORKERS,
         'accesslog': '-',
         'errorlog': '-',
