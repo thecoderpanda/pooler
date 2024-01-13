@@ -19,16 +19,9 @@ class CoreAPI(BaseModel):
     auth: Auth
     public_rate_limit: str
 
-class Wallet_App(BaseModel):
-    host: str
-    port: int
-    public_rate_limit: str
-
-
 class RPCNodeConfig(BaseModel):
     url: str
     rate_limit: str
-
 
 class ConnectionLimits(BaseModel):
     max_connections: int = 100

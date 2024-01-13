@@ -38,7 +38,7 @@ if __name__ == '__main__':
     logger.add(sys.stderr, format=FORMAT, level=logging.ERROR, serialize=JSON_LOGS)
 
     options = {
-        'bind': f'{settings.wallet_app.host}:{settings.wallet_app.port}',
+        'bind': f'{"0.0.0.0"}:{"8004"}',
         'workers': WORKERS,
         'accesslog': '-',
         'errorlog': '-',
