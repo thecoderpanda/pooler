@@ -142,7 +142,6 @@ class Web3Storage(BaseModel):
 class Settings(BaseModel):
     namespace: str
     core_api: CoreAPI
-    wallet_app: Wallet_App
     instance_id: str
     rpc: RPCConfigFull
     rlimit: RLimit
